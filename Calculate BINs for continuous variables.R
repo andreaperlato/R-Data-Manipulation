@@ -7,15 +7,15 @@ df <- data.frame(var1=1:15, var2=c(181,179,180.5,201,201.5,245,246.4,
 
 # Solution A:
 # resulting bins have an equal number of observations in each group
-df[, "wt2"] <- bin_data(df$var2, bins=20, binType = "quantile")
+df[, "var3"] <- bin_data(df$var2, bins=20, binType = "quantile")
 
 # Solution B:
 # resulting bins are equally spaced from min to max
-df[, "wt3"] <- bin_data(df$var2, bins=20, binType = "explicit")
+df[, "var4"] <- bin_data(df$var2, bins=20, binType = "explicit")
 
 # Solution C:
 # define custom bins
-df[, "wt4"] <- bin_data(df$var2, bins=c(-Inf, 250, 322, Inf), binType = "explicit")
+df[, "var5"] <- bin_data(df$var2, bins=c(-Inf, 250, 322, Inf), binType = "explicit")
 
 # Solution D:
 # without using package mltools:
