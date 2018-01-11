@@ -19,4 +19,4 @@ df[, "var5"] <- bin_data(df$var2, bins=c(-Inf, 250, 322, Inf), binType = "explic
 
 # Solution D:
 # without using package mltools:
-findInterval(df$var2, unique(quantile(df$var2, seq(0, 1, length.out = 3 + 1))), rightmost.closed = TRUE)
+findInterval(df$var2, unique(quantile(df$var2, seq(0, 1, length.out = 3 + 1))), rightmost.closed = TRUE) 
